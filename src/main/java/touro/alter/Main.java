@@ -6,10 +6,9 @@ public class Main {
         RascalFileReader fileReader = new RascalFileReader(args[0]);
         Rascal rascalTriangle = new Rascal();
 
-        int[][] matrixOfElements = fileReader.getInputList();
-        
+
+
+
+
     }
-
-
-
 }
