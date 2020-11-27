@@ -2,7 +2,6 @@ package touro.alter;
 
 public class Rascal {
 
-    private int value;
     public Rascal() {
 
     }
@@ -12,7 +11,8 @@ public class Rascal {
     public int getValue(int row, int col) {
         int halfOfRowNum = (int)Math.round((double)(row / 2));
 
-       if (row == 1 || col == 0 || col == row + 1) {       //topmost # and bookends of rows is always 1
+        int value;
+        if (row == 1 || col == 0 || col == row + 1) {       //topmost # and bookends of rows is always 1
             return 1;
         }
         else if (col == 1 || col == row - 1) {
@@ -31,8 +31,7 @@ public class Rascal {
     private int calculateOddRowVal(int halfOfRowNum, int col) {
         int midValue = (int) Math.pow(halfOfRowNum, 2) + (halfOfRowNum +1);
         int number = (halfOfRowNum - col);
-        int indexValue = midValue - (int)Math.pow(halfOfRowNum, 2) - number;
-        return indexValue;
+        return midValue - (int)Math.pow(halfOfRowNum, 2) - number;
     }
 
     /* when a row is even,  halfOfRowNum^2 + 1 will get middle value in row.
@@ -43,8 +42,7 @@ public class Rascal {
     private int calculateEvenRowVal(int halfOfRowNUm, int col) {
            int midValue = (int) Math.pow(halfOfRowNUm , 2) + 1;
            int number = (halfOfRowNUm - col);
-           int indexValue = (int) (midValue - Math.pow(number, 2));
-           return indexValue;
+        return (int) (midValue - Math.pow(number, 2));
     }
 }
 
