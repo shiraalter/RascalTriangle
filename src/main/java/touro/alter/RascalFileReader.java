@@ -15,7 +15,7 @@ public class RascalFileReader {
             matrix = new int[sampleSize][3];
             while (inputFile.hasNextInt()) {
                 for (int row = 0; row < sampleSize; row++) {
-                    for (int col = 0; col < sampleSize; col++) {
+                    for (int col = 0; col < 3; col++) {
                         matrix[row][col] = inputFile.nextInt();
                     }
                 }
@@ -28,6 +28,4 @@ public class RascalFileReader {
     public int[][] getInputList() {
         return matrix;
     }
-
-
 }
