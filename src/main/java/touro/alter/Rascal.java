@@ -6,7 +6,7 @@ public class Rascal {
     }
 
     public int getValue(int row, int col) {
-        int halfOfRowNum = (int) Math.round((double) (row / 2));
+        int halfOfRowNum =  (row / 2);
         int finalValue = 1;
         int valueBetweenColumn = row - 1;  //gets second index
 
