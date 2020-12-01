@@ -15,6 +15,8 @@ public class Rascal {
         if (col > halfOfRowNum) {
             col = row - col;
         }
+
+        //whenever col=0, never enters loop & returns "1"
         for (int i = 0; i < col; i++) {
             finalValue += valueBetweenColumn;
             valueBetweenColumn -= 2;
@@ -22,5 +24,6 @@ public class Rascal {
         return finalValue;
     }
 }
+
 
 
